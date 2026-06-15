@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出庫確認・準備アプリ</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>出庫確認・準備</h1>
+    </header>
+
+    <main>
+
+        <!-- 検索エリア -->
+        <section class="filter-area">
+
+            <div class="filter-item">
+                <label for="targetDate">出庫希望日</label>
+                <input type="date" id="targetDate">
+            </div>
+
+            <div class="filter-item">
+                <label for="keyword">業者名・出庫者名</label>
+                <input
+                    type="text"
+                    id="keyword"
+                    placeholder="業者名または出庫者名で検索">
+            </div>
+
+            <button id="searchButton">
+                表示
+            </button>
+
+        </section>
+
+        <!-- ローディング表示 -->
+        <div id="loading" class="loading hidden">
+            読み込み中...
+        </div>
+
+        <!-- 案件一覧 -->
+        <section id="requestList">
+
+            <!--
+            JavaScriptで以下のようなカードが生成されます
+
+            <article class="request-card">
+
+                <div class="card-header">
+                    <h2>河南工業</h2>
+
+                    <p>出庫者：清水</p>
+
+                    <p>出庫希望日：2026-06-15</p>
+                </div>
+
+                <div class="item-block">
+
+                    <div class="item-name">
+                        たこ糸100m
+                    </div>
+
+                    <div class="item-quantity">
+                        数量：3個
+                    </div>
+
+                    <div class="result-group">
+
+                        <div class="result-option">
+
+                            <input
+                                type="radio"
+                                id="complete-1"
+                                name="item-1"
+                                value="準備完了">
+
+                            <label for="complete-1">
+                                準備完了
+                            </label>
+
+                        </div>
+
+                        <div class="result-option">
+
+                            <input
+                                type="radio"
+                                id="unable-1"
+                                name="item-1"
+                                value="準備不可">
+
+                            <label for="unable-1">
+                                準備不可
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="confirm-button">
+                    確定
+                </button>
+
+            </article>
+            -->
+
+        </section>
+
+        <!-- データなし -->
+        <div id="emptyMessage" class="empty-message hidden">
+            対象の案件はありません。
+        </div>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
