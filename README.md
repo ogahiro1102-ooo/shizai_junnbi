@@ -1,2 +1,0 @@
-# shizai_junnbi
-
